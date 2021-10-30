@@ -8,12 +8,12 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 const App = () => {
     const classes = useStyles();
-    return(
+    return (
         <>
-            <CssBaseline/>
+            <CssBaseline />
             <AppBar position="relative" color="primary">
                 <Toolbar >
-                    <PhotoCamera className={classes.icon}/>
+                    <PhotoCamera className={classes.icon} />
                     <Typography variant="h6">
                         Photo Album
                     </Typography>
@@ -46,29 +46,29 @@ const App = () => {
                 </div>
                 <Container className={classes.cardGrid} maxWidth="md">
                     <Grid container spacing={4}>
-                    {cards.map(() => (
-                        <Grid item xs={12} sm={6} md={4} lg={3}>
-                            <Card className={classes.card}>
-                                <CardMedia 
-                                    className={classes.cardMedia}
-                                    image="https://source.unsplash.com/random"
-                                    title="Image title"
-                                />
-                                <CardContent className={classes.CardContent}>
-                                    <Typography gutterBottom variant="h5">
-                                        Title
-                                    </Typography>
-                                    <Typography>
-                                        This is a media card. You can use this section to describe the content. 
-                                    </Typography>
-                                </CardContent>
-                                <CardActions>
-                                    <Button size="small" color="primary">View</Button>
-                                    <Button size="small" color="primary">Edit</Button>
-                                </CardActions>
-                            </Card>
-                        </Grid>
-                    ))}    
+                        {cards.map(() => (
+                            <Grid item xs={12} sm={6} md={4} lg={3}>
+                                <Card className={classes.card}>
+                                    <CardMedia
+                                        className={classes.cardMedia}
+                                        image="https://source.unsplash.com/random"
+                                        title="Image title"
+                                    />
+                                    <CardContent className={classes.CardContent}>
+                                        <Typography gutterBottom variant="h5">
+                                            Title
+                                        </Typography>
+                                        <Typography>
+                                            This is a media card. You can use this section to describe the content.
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions>
+                                        <Button size="small" color="primary">View</Button>
+                                        <Button size="small" color="primary">Edit</Button>
+                                    </CardActions>
+                                </Card>
+                            </Grid>
+                        ))}
                     </Grid>
                 </Container>
             </main>
